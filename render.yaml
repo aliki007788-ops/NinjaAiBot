@@ -1,0 +1,37 @@
+# render.yaml
+services:
+  - type: web
+    name: NinjaAiBot-Pro
+    env: python
+    region: frankfurt  # یا oregon/nyc برای کاربران آمریکایی
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    disk:
+      name: ninja-data
+      mountPath: /var/lib/data
+      sizeGB: 1
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.10.12"
+      - key: RENDER
+        value: "true"
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: WALLET_ADDRESS
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: REPLICATE_API_TOKEN
+        sync: false
+      - key: APP_API_ID
+        sync: false
+      - key: APP_API_HASH
+        sync: false
+      - key: APP_PHONE
+        sync: false
+      - key: TARGET_GROUPS
+        sync: false
+      - key: WEBAPP_URL
+        value: "https://ninja-bot-pro.onrender.com"  # ✏️ پس از دیپلوی واقعی آدرس را به‌روز کنید
