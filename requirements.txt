@@ -1,8 +1,8 @@
 ﻿aiogram==3.6.0
 aiohttp
-sqlite3
 python-dotenv
 requests
 telethon==1.34.0
 replicate
+
 groq
